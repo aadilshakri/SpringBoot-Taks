@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+//@RequestMapping("/api")
 @RestController
 public class TrackController {
     @Autowired
@@ -32,7 +33,7 @@ public class TrackController {
         return responseEntity;
     }
 
-    @GetMapping("/tracks")
+    @GetMapping("/track")
     public ResponseEntity<?> getAllTracks(){
         ResponseEntity responseEntity;
         try{
@@ -54,7 +55,7 @@ public class TrackController {
         return responseEntity;
     }
 
-    @GetMapping("/name/{trackName}")
+    @GetMapping("/track/{trackName}")
     public ResponseEntity<?> getTrackByName(@PathVariable String trackName){
         ResponseEntity responseEntity;
         try{

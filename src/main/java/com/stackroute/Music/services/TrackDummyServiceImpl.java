@@ -5,13 +5,17 @@ import com.stackroute.Music.exceptions.TrackAlreadyExistsException;
 import com.stackroute.Music.exceptions.TrackNotFoundException;
 import com.stackroute.Music.model.Track;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Qualifier("trackServiceImplDummy")
+@Primary
 @Service
-public class TrackServiceImpl implements TrackService {
+public class TrackDummyServiceImpl implements TrackService {
 
     @Autowired
     TrackRepository trackRepository;
